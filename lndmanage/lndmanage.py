@@ -343,7 +343,7 @@ class Parser(object):
                  'channel',
             formatter_class=argparse.ArgumentDefaultsHelpFormatter)
         self.parser_update_fees.add_argument(
-            '--cltv', type=int, default=14,
+            '--cltv', type=int, default=40,
             help='CLTV time delta in fee policy')
         self.parser_update_fees.add_argument(
             '--min-base-fee-msat', type=int, default=20,
