@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
 optimization_parameters = {
-    'cltv': 14,  # blocks
+    'cltv': 40,  # blocks
     'min_base_fee': 20,  # msat
     'max_base_fee': 5000,  # msat
     'min_fee_rate': 0.000004,
@@ -202,7 +202,7 @@ class FeeSetter(object):
 
         # loop over channel peers
         for pk, cs in self.node.pubkey_to_channel_map().items():
-            logger.info(f">>> Fee optmization for node {pk} "
+            logger.info(f">>> Fee optimization for node {pk} "
                         f"({self.node.network.node_alias(pk)}):")
             # loop over channels with peer
             peer_capacity = 0
